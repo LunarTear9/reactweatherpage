@@ -40,10 +40,7 @@ function App() {
       })
       .catch(error => console.error('Error fetching data:', error));
   }, []);
-  function getFormattedDateTime(timestamp) {
-    const date = new Date(timestamp);
-    return date.toLocaleString('en-US', { weekday: 'short', month: 'short', day: 'numeric', hour: 'numeric', minute: 'numeric' });
-  }
+  
   useEffect(() => {
     if (weatherData) {
       // If chart already exists, destroy it
