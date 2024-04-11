@@ -1,0 +1,88 @@
+.App {
+  
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.gradient-background {
+  background: linear-gradient(to bottom, #6cc1fa, #5286a5); /* Example gradient colors */
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  box-shadow: 22px 5px 11px 3px #002d57;
+  width: 70%; /* Adjust this value to your preference */
+  height: 70vh; /* Adjust this value to your preference */
+  max-width: 700px; /* Adjust this value to your preference */
+  padding: 50px; /* Adjust this value to add padding from each direction */
+  background-color: rgba(76, 143, 230, 0.349); /* Or any other background color you want */
+  border-radius: 50px; /* Adjust this value for circular corners */
+  margin-right: 40px;
+  display: flex
+}
+
+.container2{
+  width: 70%; /* Adjust this value to your preference */
+  height: 70vh; /* Adjust this value to your preference */
+  max-width: 800px; /* Adjust this value to your preference */
+  padding: 50px; /* Adjust this value to add padding from each direction */
+  background-color: rgba(76, 143, 230, 0.349); /* Or any other background color you want */
+  border-radius: 50px; /* Adjust this value for circular corners */
+  margin-right: 40px;
+  display: flex
+}
+
+.TextColumn {
+ 
+  margin-left: 60px;
+  margin-right:40px;
+}
+
+.Header {
+  
+  background-color: #2372b3;
+  max-width: 400px;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.IconWidget {
+justify-content: center;
+  background-color: rgba(113, 175, 255, 0.685);
+  border-radius: 50px;
+  max-height: 200px;
+  min-height: 50px;
+  box-shadow: 12px 5px 11px 3px #002d57;
+  max-width: 150px;
+margin-top: 40px;
+  display: flex;
+ 
+}
+
+.youtube-video {
+
+
+  margin-left: 60px;
+  min-width: 400px;
+}
+
+.arrow-button {
+background-color: rgba(186, 238, 255, 0.363);
+  border-radius: 10px;
+  margin-left: 18px;
+}
+
+.chart-container {
+  margin-right: 10px;
+margin-top: 40px;
+
+  background-color: rgba(113, 175, 255, 0.685);
+  border-radius:40px;
+  box-shadow: 12px 5px 11px 3px #002d57;
+}
