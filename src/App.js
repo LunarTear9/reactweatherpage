@@ -4,11 +4,16 @@ import iconImage from './assets/25231.png';
 import rainImage from './assets/heavy-rain.png';
 import TemperatureImage from './assets/temperature.png';
 import ClooudImage from './assets/clouddisplay.png';
+import iconLogo from './assets/mylogo.png';
 
 import './App.css'; // Assuming you have a CSS file for styling
 
 const handleIconClick = () => {
   window.location.href = "https://github.com/LunarTear9/react_page";
+};
+
+const handleIconClick2 = () => {
+  window.location.href = "https://www.pitmtech.com";
 };
 
 function getDay(timestamp, prevTimestamp) {
@@ -17,11 +22,11 @@ function getDay(timestamp, prevTimestamp) {
   const currentDay = date.toLocaleString('en-US', { weekday: 'long' });
   const prevDay = prevDate.toLocaleString('en-US', { weekday: 'long' });
 
-  // Check if the current day is the same as the previous day
+  
   if (currentDay !== prevDay) {
     return currentDay;
   } else {
-    return ''; // Return empty string for repeated days
+    return '';
   }
 }
 
@@ -31,11 +36,11 @@ function App() {
   const [currentDayIndex, setCurrentDayIndex] = useState(0);
   const chartRef = useRef(null);
   useEffect(() => {
-    // Fetch data from the API
+
     fetch('https://api.open-meteo.com/v1/forecast?latitude=35.6895&longitude=139.6917&hourly=temperature_2m,precipitation_probability,cloud_cover&forecast_days=7')
       .then(response => response.json())
       .then(data => {
-        // Set the fetched data to the state
+      
         setWeatherData(data);
       })
       .catch(error => console.error('Error fetching data:', error));
@@ -43,7 +48,7 @@ function App() {
   
   useEffect(() => {
     if (weatherData) {
-      // If chart already exists, destroy it
+      
       if (chartRef.current !== null) {
         chartRef.current.destroy();
       }const ctx = document.getElementById('temperatureChart').getContext('2d');
@@ -82,14 +87,14 @@ function App() {
     <div className="App">
       <div className="gradient-background">
         <div className="TextColumn">
-          <a href="https://www.pitmtech.com" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'inherit' }}>
-            <h1>PiTM</h1>
-          </a>
+        <div className="icon-container" onClick={handleIconClick2}>
+            <img src={iconLogo} alt="Icon" className="icon" style={{ width: '110px', height: '100px' }} />
+          </div>
           <h2>Live Weather Preview</h2>
           <h3>Tokyo, Japan</h3>
           <p>Currently only supporting Temperatures</p>
           <div className="icon-container" onClick={handleIconClick}>
-            <img src={iconImage} alt="Icon" className="icon" style={{ width: '100px', height: '100px' }} />
+            <img src={iconImage} alt="Icon" className="icon" style={{ width: '40px', height: '40px' }} />
           </div>
         </div>
         {/* Your content */}
