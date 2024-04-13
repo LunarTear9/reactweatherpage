@@ -67,7 +67,7 @@ margin-top: 40px;
 
 .youtube-video {
 
-
+  
   margin-left: 60px;
   min-width: 400px;
 }
@@ -85,4 +85,18 @@ margin-top: 40px;
   background-color: rgba(113, 175, 255, 0.685);
   border-radius:40px;
   box-shadow: 12px 5px 11px 3px #002d57;
+}
+
+.icon-container2 {
+
+  display: flex;
+
+
+
+
+}
+
+.row-container {
+
+  display: flex;
 }
