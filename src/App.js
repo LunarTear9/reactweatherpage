@@ -16,6 +16,10 @@ const handleIconClick2 = () => {
   window.location.href = "https://www.pitmtech.com";
 };
 
+const handleLinkClick = () => {
+  window.location.href = "https://github.com/LunarTear9/Weather-App";
+};
+
 function getDay(timestamp, prevTimestamp) {
   const date = new Date(timestamp);
   const prevDate = new Date(prevTimestamp);
@@ -88,13 +92,17 @@ function App() {
       <div className="gradient-background">
         <div className="TextColumn">
         <div className="icon-container" onClick={handleIconClick2}>
-            <img src={iconLogo} alt="Icon" className="icon" style={{ width: '110px', height: '100px' }} />
+            <img src={iconLogo} alt="Icon" className="icon" style={{ width: '110px', height: '100px', cursor: 'pointer' }} />
           </div>
           <h2>Live Weather Preview</h2>
           <h3>Tokyo, Japan</h3>
           <p>Currently only supporting Temperatures</p>
-          <div className="icon-container" onClick={handleIconClick}>
-            <img src={iconImage} alt="Icon" className="icon" style={{ width: '40px', height: '40px' }} />
+          <div className="row-container">
+            <div className="icon-container" onClick={handleIconClick}>
+            <img src={iconImage} alt="Icon" className="icon" style={{ width: '40px', height: '40px' , cursor: 'pointer'}} />
+            
+            </div>
+            <h2 style = {{ marginLeft: 100, color: 'black', fontFamily: 'Arial', fontSize: '14px', textDecoration: 'underlined', cursor: 'pointer'}} onClick={handleLinkClick}>GET THE APP</h2>
           </div>
         </div>
         {/* Your content */}
