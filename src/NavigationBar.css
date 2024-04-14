@@ -1,0 +1,46 @@
+/* NavigationBar.css */
+
+.navbar {
+    background-color: #4db0f2;
+    padding: 10px 20px;
+    position: sticky;
+    z-index: 1000;
+  }
+  
+  .nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .nav-list li {
+    display: inline;
+    margin-right: 20px;
+  }
+  
+  .nav-list li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+  }
+  
+  .nav-list li a:hover {
+    color: #ffcc00;
+  }
+
+.Container {
+display: flex;
+justify-content: center;
+align-items: center;
+
+
+}
+
+.HeaderList {
+padding-left: 60%;
+
+
+
+
+}
+  
